@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Congratulations!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Congratulations!</h1>
+    <p>You have been selected to win a brand new <strong>iPhone 15</strong>!</p>
+    
+    <div id="steps">
+      <p>Step 1: Answer 3 quick questions</p>
+      <button onclick="nextStep()">Start</button>
+    </div>
+
+    <div id="quiz" style="display: none;">
+      <p id="question"></p>
+      <button onclick="nextQuestion()">Yes</button>
+      <button onclick="nextQuestion()">No</button>
+    </div>
+
+    <div id="loading" style="display: none;">
+      <p>Checking your answers...</p>
+      <div class="bar"></div>
+    </div>
+
+    <div id="final" style="display: none;">
+      <p>✅ You are eligible!</p>
+      <p>Share this with 5 friends to unlock your gift:</p>
+      <button onclick="window.location.href='https://your-cpa-link.com'">Continue</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

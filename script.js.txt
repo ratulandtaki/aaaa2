@@ -1,0 +1,27 @@
+let questions = [
+  "Do you like iPhones?",
+  "Would you recommend this to a friend?",
+  "Are you over 18 years old?"
+];
+
+let current = 0;
+
+function nextStep() {
+  document.getElementById("steps").style.display = "none";
+  document.getElementById("quiz").style.display = "block";
+  document.getElementById("question").textContent = questions[current];
+}
+
+function nextQuestion() {
+  current++;
+  if (current < questions.length) {
+    document.getElementById("question").textContent = questions[current];
+  } else {
+    document.getElementById("quiz").style.display = "none";
+    document.getElementById("loading").style.display = "block";
+    setTimeout(() => {
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("final").style.display = "block";
+    }, 3000);
+  }
+}
